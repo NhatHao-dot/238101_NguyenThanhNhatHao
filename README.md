@@ -20,5 +20,24 @@
 ## Hướng Dẫn Chạy Ở Môi Trường Phát Triển (Local)
 1. Clone dự án:
    ```bash
-   git clone [https://github.com/your-username/2212345_NguyenVanAn.git](https://github.com/your-username/2212345_NguyenVanAn.git)
-   cd 2212345_NguyenVanAn
+   git clone [https://github.com/your-username/238101_NguyenThanhNhatHao.git](https://github.com/your-username/238101_NguyenThanhNhatHao.git)
+   cd 238101_NguyenThanhNhatHao
+
+## Docker Hub
+
+### Backend
+
+- Docker Hub: https://hub.docker.com/r/YOUR_DOCKERHUB_USERNAME/backend
+- Image: YOUR_DOCKERHUB_USERNAME/backend:latest
+
+### Chạy Backend bằng Docker
+
+```bash
+docker pull YOUR_DOCKERHUB_USERNAME/backend:latest
+docker run -d --name hr-backend -p 5000:5000 --env-file backend/.env YOUR_DOCKERHUB_USERNAME/backend:latest
+```
+
+Kiểm tra API:
+
+- http://localhost:5000/health
+- http://localhost:5000/api/employees
